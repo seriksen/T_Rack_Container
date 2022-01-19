@@ -13,7 +13,7 @@ gmake
 sudo make install
 
 
-boost_ver=1.70.0
+boost_ver=1.73.0
 boost_name=boost_${boost_ver//./_}
 dir=${EXTERNALS_BASE}/boost
 mkdir -p ${dir}
@@ -28,7 +28,7 @@ cd ${boost_name}
 
 
 clhep_version=2.4.4.0
-url=http://proj-clhep.web.cern.ch/proj-clhep/DISTRIBUTION/tarFiles/clhep-${clhep_version}.tgz
+url=https://proj-clhep.web.cern.ch/proj-clhep/dist1/clhep-${clhep_version}.tgz
 dir=${EXTERNALS_BASE}/clhep
 mkdir -p $dir
 cd $dir
@@ -67,6 +67,7 @@ cmake -G "Unix Makefiles" \
       -DGEANT4_INSTALL_DATA=ON \
       -DGEANT4_USE_GDML=ON \
       -DGEANT4_USE_SYSTEM_CLHEP=ON \
+      -DGEANT_USE_OPENGL_X11=ON \
       -DCLHEP_ROOT_DIR=${EXTERNALS_BASE}/clhep/clhep_${clhep_version}-install \
       -DGEANT4_INSTALL_DATA_TIMEOUT=3000 \
       -DXERCESC_ROOT_DIR=${EXTERNALS_BASE}/xerces/xerces-c-${xerces_version}-install \
