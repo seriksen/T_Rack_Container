@@ -1,3 +1,5 @@
+# TODO Add line to set EXTERNALS_BASE if it doesn't exist
+
 cmake_ver=3.20.6
 dir=${EXTERNALS_BASE}/cmake
 mkdir -p ${dir}
