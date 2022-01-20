@@ -8,7 +8,7 @@ RUN dnf -y install sudo
 SHELL ["/bin/bash", "-c"]
 
 # Set user
-ARG user=t_rack
+ARG user=tesseract_user
 ENV DOCKER_USER="${user}"
 RUN useradd -ms /bin/bash --groups wheel ${DOCKER_USER}
 RUN echo "${DOCKER_USER} ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
